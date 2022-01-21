@@ -23,8 +23,7 @@ proportional to the logarithm of the number of items stored in the tree.
 This is much better than the linear time required to find items by key in an
 (unsorted) array but slower than the corresponding operations on hash tables.
 
-In this post, we have listed out commonly asked interview questions
-on Binary Search Tree:
+these are commonly asked interview questions on Binary Search Tree:
 
 1\. [Insertion In a BST](https://github.com/NyomanAdiwinanda/Data-Structure-With-Javascript/tree/main/Binary%20Search%20Tree/1.%20Insertion)
 
