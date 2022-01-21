@@ -1,3 +1,4 @@
+// A class to store a BST node
 class Node {
   constructor(data) {
     this.data = data;
@@ -12,7 +13,9 @@ class BinarySearchTree {
     this.output = [];
   }
 
+  // Function to perform inorder traversal on the tree
   traverseInOrder(node) {
+    // if the node is None, return and do nothing
     if (node === null) {
       return;
     }
@@ -22,20 +25,27 @@ class BinarySearchTree {
     this.traverseInOrder(node.right);
   }
 
+  // Recursive function to insert a key into a BST
   insertNode(node, key) {
+    // if the node is None, create a new node and return it
     if (node === null) {
       return new Node(key);
     }
 
+    // if the given key is less than the node, recur for the left subtree
     if (key < node.data) {
       node.left = this.insertNode(node.left, key);
-    } else {
+    } 
+    
+    // otherwise, recur for the right subtree
+    else {
       node.right = this.insertNode(node.right, key);
     }
 
     return node;
   }
 
+  // Function to construct a BST from given keys
   constructBST(keys) {
     let tree = null;
 
