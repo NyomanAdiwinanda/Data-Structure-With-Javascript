@@ -11,7 +11,7 @@ Each element (commonly called nodes) contains two items: the data stored and a
 link to the next node. The data can be any valid data type. You can see this
 illustrated in the diagram below.
 
-![linked list image](https://www.google.com/search?q=linked+list+image&sxsrf=AOaemvJLeoYgiOCLorcshoPXsEpzv2xaoA:1642866431856&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjk6tWw2sX1AhWlH7cAHQALDisQ_AUoAXoECAEQAw&biw=1571&bih=821&dpr=2#imgrc=CNUixmjrNbZ2TM)
+![linked list image](https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2013/03/Linkedlist.png)
 
 The entry point to a linked list is called the head. The head is a reference to
 the first node in the linked list. The last node on the list points to null. If
