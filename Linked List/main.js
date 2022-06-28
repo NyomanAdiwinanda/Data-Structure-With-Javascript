@@ -121,22 +121,31 @@ class LinkedList {
   }
 
   reverse() {
-    let size = this.getSize();
+    let prev;
+    let temp;
 
-    let lastNode = this.head;
-
-    while (lastNode.next !== null) {
-      lastNode = lastNode.next;
-      this.insertNodeAtFront(lastNode.data);
+    while (this.head) {
+      temp = this.head;
+      this.head = this.head.next;
+      temp.next = prev;
+      prev = temp;
     }
 
-    while (size !== 1) {
-      this.removeLastNode();
-      size--;
-    }
+    this.head = prev;
   }
 
   clear() {
     this.head = null;
   }
 }
+
+const list = new LinkedList();
+list.insertNode(2);
+list.insertNode(4);
+list.insertNode(6);
+
+console.log(JSON.stringify(list, null, 2));
+
+list.reverse();
+
+console.log(JSON.stringify(list, null, 2));
