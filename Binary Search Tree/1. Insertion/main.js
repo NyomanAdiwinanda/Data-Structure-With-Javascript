@@ -25,6 +25,20 @@ class BinarySearchTree {
     this.traverseInOrder(node.right);
   }
 
+  perfectTree(node) {
+    let count = 1;
+
+    if (node.left || node.right === null) {
+      count += 1;
+    }
+
+    count += 2;
+    this.perfectTree(node.left);
+    this.perfectTree(node.right);
+
+    return count;
+  }
+
   // Recursive function to insert a key into a BST
   insertNode(node, key) {
     // if the node is None, create a new node and return it
@@ -35,8 +49,8 @@ class BinarySearchTree {
     // if the given key is less than the node, recur for the left subtree
     if (key < node.data) {
       node.left = this.insertNode(node.left, key);
-    } 
-    
+    }
+
     // otherwise, recur for the right subtree
     else {
       node.right = this.insertNode(node.right, key);
@@ -64,4 +78,4 @@ class BinarySearchTree {
   }
 }
 
-new BinarySearchTree([15, 10, 20, 8, 12, 16, 25]).main();
+new BinarySearchTree([18, 15, 30, 40, 50, 100, 40, 8, 7, 9]).main();
